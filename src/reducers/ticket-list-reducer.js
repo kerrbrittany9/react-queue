@@ -11,7 +11,9 @@ export default (state = [], action) => {
           timeOpened : timeOpened,
           id: id
         }
-      ];
+      ]
+      case 'CLOSE_TICKET'
+      return
     default:
       return state;
   }

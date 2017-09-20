@@ -30,6 +30,7 @@ class Queue extends React.Component{
   }
 
   render(){
+    console.log("Current Path:", this.props.location.pathname);
     return (
       <div>
         <TicketList ticketList = {this.props.masterTicketList}/>

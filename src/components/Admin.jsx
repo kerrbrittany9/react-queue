@@ -4,10 +4,14 @@ import {connect} from 'react-redux'
 
 class Admin extends React.Component {
   render() {
+    console.log("Current Path:", this.props.location.pathname);
     return (
       <div>
         <h3>Admin page!</h3>
-        <TicketList ticketList = {this.props.adminMasterTicketList}/>
+        <TicketList
+        ticketList = {this.props.adminMasterTicketList}
+        currentRoute= {this.props.location.pathname}
+        />
       </div>
     );
   }
