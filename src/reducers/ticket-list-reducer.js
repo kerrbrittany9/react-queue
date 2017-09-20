@@ -12,9 +12,11 @@ export default (state = [], action) => {
           id: id
         }
       ]
-      case 'CLOSE_TICKET'
+      case 'CLOSE_TICKET':
+        const updateTicketList = state.filter(ticket => ticket.id !== action.ticketId);
+        return updateTicketList
       return
-    default:
-      return state;
+      default:
+        return state;
   }
 };

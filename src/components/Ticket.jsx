@@ -14,7 +14,7 @@ function Ticket(props){
       return (
         <div>
           {ticketDetails}
-          <button>Close Ticket</button>
+          <button onClick={() => { props.handleClosingTicket(props.id)}}>Close Ticket</button>
         </div>
       );
     }
@@ -33,7 +33,9 @@ Ticket.propTypes = {
   location: PropTypes.string.isRequired,
   timeOpened: PropTypes.number,
   issue: PropTypes.string,
-  currentRoute: PropTypes.string
+  id: PropTypes.string.isRequired,
+  currentRoute: PropTypes.string,
+  handleClosingTicket: PropTypes.func
 };
 
 export default Ticket;
