@@ -23,7 +23,6 @@ class NewTicketForm extends React.Component {
       description: _issue.value,
       timeOpened: new Date().getTime()
     };
-    console.log(action.id);
     dispatch(action);
     this.props.hideFormAfterSubmission();
   }
